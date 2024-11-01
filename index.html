@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento Residencial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        Sistema de Monitoramento Residencial
+    </header>
+
+    <!-- Contêiner principal para layout em duas colunas -->
+    <div class="main-container">
+        <!-- Barra de Navegação do Mapa de Câmeras -->
+        <div id="cameraMap">
+            <h2>Mapa de Câmeras</h2>
+            <!-- Barra de Pesquisa -->
+            <input type="text" id="searchInput" placeholder="Pesquisar câmeras..." onkeyup="filterCameras()">
+            <!-- Botões das Câmeras -->
+            <button class="camera" id="sala">Câmera da Sala</button>
+            <button class="camera" id="jardim">Câmera do Jardim</button>
+            <button class="camera" id="portao">Câmera do Portão</button>
+            <button class="camera" id="computador">Câmera do Computador</button>
+        </div>
+
+        <!-- Área de Exibição da Câmera Selecionada -->
+        <div class="camera-display">
+            <!-- Imagem Estática e Vídeo para Câmera do Computador -->
+            <img id="cameraFeedImage" src="https://via.placeholder.com/600x400" alt="Visualização da Câmera" style="display: block;">
+            <video id="cameraFeedVideo" autoplay playsinline style="display: none;"></video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

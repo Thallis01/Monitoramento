@@ -1,0 +1,112 @@
+/* Fonte e cores básicas */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Serif JP', serif;
+    background-color: #fdf6e3; /* Fundo suave que remete à estética japonesa */
+    margin: 0;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    font-size: 1.8em;
+    text-align: center;
+    padding: 15px;
+    background-color: #d32f2f;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contêiner principal para layout em duas colunas */
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #f8f4f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Barra de Mapa de Câmeras à Esquerda */
+#cameraMap {
+    width: 220px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-right: 2px solid #d32f2f;
+    text-align: center;
+}
+
+#cameraMap h2 {
+    font-size: 1.2em;
+    color: #d32f2f;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #b71c1c;
+    padding-bottom: 5px;
+}
+
+/* Estilos para os botões de câmera */
+#cameraMap button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 16px;
+    font-family: 'Noto Serif JP', serif;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#cameraMap button:hover {
+    background-color: #b71c1c;
+}
+
+/* Área de Exibição da Câmera Selecionada */
+.camera-display {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Ajuste de Imagem e Vídeo */
+#cameraFeedImage, #cameraFeedVideo {
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid #d32f2f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    #cameraMap {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #d32f2f;
+    }
+
+    .camera-display {
+        padding: 10px;
+    }
+}
+/* Barra de Pesquisa */
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #d32f2f;
+    margin-bottom: 15px;
+}
